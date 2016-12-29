@@ -35,12 +35,12 @@ As you see above, all the 4 tasks require you to use the stove. There are 4 slot
 
 *Pause here for a moment and think what would you do?*
 
-I'm sure most of you would get it right. Which means you've already nailed it. 
+I'm sure most of you would get it right. Which means you've already nailed the concurrency concepts. 
 
 Let's not jump to the solution now. Instead, lets try a few solutions to this problem and reason them out.
 
 ## Solution 1 - 'The inefficient chef' ##
-This is the solution of an inefficient chef who can ever think of one task at a time. This chef can't even come out of a task until that is finished.
+This is the solution of an inefficient chef who can only think of one task at a time. This chef can't even come out of a task until that is finished.
 Here is the approach.
 * Boil Pasta and wait for it to complete - 5 minutes.
 * Boil Cream and wait for it to complete - 2 minutes.
@@ -69,7 +69,7 @@ Now you are 4 chefs in total and each one of you decide to pick up a task and do
 * Boil Sauce and wait for it to complete - 3 minute.  - Chef 4
 
 Definitely looks a better idea than Solution 1. Each Chef work independently on their respective tasks and get it done.
-The overall task completion time is 5 minutes (That is the most time consuming task). We have cut down the latency my more than half.
+The overall task completion time is 5 minutes (That is the most time consuming task). You have cut down the latency my more than half.
 We're utilizing the stove effectively. But as an extra cost, we've acquired more chefs. Although they are your friends, you will be paying them
 a few bucks to recognize their time and help. You've increased the cost.
 
@@ -90,10 +90,10 @@ But we are bad in doing multi-processing (ie doing 2 things simultaneously. For 
 
 So this is a more efficient implementation which employs multi tasking with the following steps.
 
-* Boil Pasta and leave it in the stove - Move on to the next task.
-* Boil Cream and leave it in the stove - Move on to the next task.
-* Boil Butter and leave it in the stove - Move on to the next task.
-* Boil Sauce and leave it in the stove - Do something useful than staring at the stove.
+* Boil Pasta and leave it on the stove - Move on to the next task.
+* Boil Cream and leave it on the stove - Move on to the next task.
+* Boil Butter and leave it on the stove - Move on to the next task.
+* Boil Sauce and leave it on the stove - Do something useful than staring at the stove.
 * When Butter finished boiling, take it off the stove.
 * When Cream finished boiling, take it off the stove.
 * When Sauce finished boiling, take it off the stove.
